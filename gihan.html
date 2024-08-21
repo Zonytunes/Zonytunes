@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonytunes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .music-list, .video-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .music-item, .video-item {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 45%;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Contact Form Styling */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        /* WhatsApp Link Styling */
+        .social-media a[href*="wa.me"] {
+            background-color: #25D366;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .social-media a[href*="wa.me"]:hover {
+            background-color: #1EBE54;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zonytunes</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Zonytunes</h2>
+        <p>Your hub for the latest and greatest in music. Explore our content, watch videos, and connect with us!</p>
+    </section>
+
+    <section id="music">
+        <h2>Latest Music</h2>
+        <div class="music-list">
+            <div class="music-item">
+                <h3>Song Title 1</h3>
+                <audio controls>
+                    <source src="music/song1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="music-item">
+                <h3>Song Title 2</h3>
+                <audio controls>
+                    <source src="music/song2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Latest Videos</h2>
+        <div class="video-list">
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g08AhudD4tc?si=JmIRdSM9ZgjoKJvO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KPAr6nCAtbc?si=QiLpDs66tjCG73MA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Zonytunes</h2>
+        <p>Zonytunes is a music channel dedicated to bringing you the best tunes across genres. Stay tuned for more exciting content!</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p>Email: <a href="mailto:contact@zonytunes.com">contact@zonytunes.com</a></p>
+
+        <div class="social-media">
+            <p>Contact us on WhatsApp:</p>
+            <a href="https://wa.me/+94711227705" target="_blank">Chat with us on WhatsApp</a>
+        </div>
+
+        <div class="social-media">
+            <p>Follow Us:</p>
+            <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a> |
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Zonytunes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // You can add interactivity here if needed
+    </script>
+</body>
+</html>
